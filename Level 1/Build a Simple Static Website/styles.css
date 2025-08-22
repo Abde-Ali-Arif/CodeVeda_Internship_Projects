@@ -1,0 +1,223 @@
+:root {
+  --bg: #0b1020;
+  --surface: #121735;
+  --text: #e8ecf1;
+  --muted: #b8c0cc;
+  --primary: #5b8cff;
+  --primary-600: #4978f0;
+  --border: #2a335a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+input, textarea, button {
+  font: inherit;
+  color: inherit;
+}
+
+input, textarea {
+  width: 100%;
+  background: #0f1430;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: color-mix(in srgb, var(--primary) 60%, var(--border));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+label span {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 16, 32, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.25rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.brand img {
+  filter: drop-shadow(0 0 8px rgba(91, 140, 255, 0.5));
+}
+
+.main-nav a,
+.footer-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.main-nav a[aria-current="page"] {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.main-nav a:hover,
+.footer-nav a:hover {
+  color: white;
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+  background: radial-gradient(80% 80% at 20% 10%, color-mix(in srgb, var(--primary) 14%, transparent), transparent),
+              radial-gradient(60% 60% at 90% 10%, color-mix(in srgb, #22d3ee 16%, transparent), transparent);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 3.5vw + 1rem, 3rem);
+  margin: 0 0 0.5rem;
+}
+
+.hero-content p {
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  transition: transform 120ms ease, background 120ms ease, border 120ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--primary) 60%, var(--border));
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, var(--primary), var(--primary-600));
+  border: none;
+  color: white;
+}
+
+.hero-art {
+  justify-self: center;
+  width: min(640px, 100%);
+}
+
+.features {
+  padding: 2.5rem 0 3rem;
+}
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: rgba(11, 16, 32, 0.8);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0.25rem;
+}
+
+/* Medium screens */
+@media (min-width: 700px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .nav {
+    padding: 1rem 0.25rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+

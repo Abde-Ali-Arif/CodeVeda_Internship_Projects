@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Simple Static Site</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="logo.svg" alt="Site logo" width="32" height="32" />
+          <span>StaticSite</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container" style="padding: 2rem 0 1rem">
+        <h1>Contact us</h1>
+        <p class="muted">We'd love to hear from you. Send a message below.</p>
+      </section>
+
+      <section class="container" style="padding-bottom: 3rem">
+        <div class="hero-grid">
+          <form class="card" action="#" method="post" style="display: grid; gap: 0.75rem">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required placeholder="Your name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required placeholder="you@example.com" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required placeholder="How can we help?" ></textarea>
+            </label>
+            <button class="btn primary" type="submit">Send message</button>
+          </form>
+
+          <div class="card" style="display: grid; gap: 0.5rem">
+            <h3>Contact info</h3>
+            <p class="muted">Email: staticsite@gmail.com</p>
+            <p class="muted">Phone: +91 99937 55842 </p>
+            <p class="muted">Address: 156-A gandhi nagar , Bhopal</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> StaticSite. All rights reserved.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="about.html">About</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

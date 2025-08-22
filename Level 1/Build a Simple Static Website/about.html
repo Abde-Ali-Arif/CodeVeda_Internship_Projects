@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Simple Static Site</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="logo.svg" alt="Site logo" width="32" height="32" />
+          <span>StaticSite</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container" style="padding: 2rem 0 1rem">
+        <h1>About this template</h1>
+        <p class="muted">
+          This is a lightweight starting point for a multi-page static website.
+          It uses semantic HTML and modern CSS with a focus on responsiveness.
+        </p>
+      </section>
+
+      <section class="container" style="padding-bottom: 2rem">
+        <div class="feature-grid">
+          <article class="card">
+            <h3>Approach</h3>
+            <p>
+              Mobile-first styling with progressive enhancement. Layout uses
+              flexbox and grid. Typography and spacing follow a simple scale.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Accessibility</h3>
+            <p>
+              Uses semantic landmarks, accessible navigation, and sufficient
+              contrast. Tested for keyboard navigability.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Customization</h3>
+            <p>
+              Tweak CSS variables, replace images, and extend sections to suit
+              your content and brand.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="container" style="padding-bottom: 3rem">
+        <div class="hero-grid">
+          <div>
+            <h2>Clean and adaptable</h2>
+            <p class="muted">
+              The design is intentionally minimal so you can adapt it easily.
+              Swap the palette, adjust radii, or add components.
+            </p>
+          </div>
+          <div class="hero-art">
+            <img src="hero.svg" alt="Illustration showing layout blocks" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> StaticSite. All rights reserved.</p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="about.html" aria-current="page">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+

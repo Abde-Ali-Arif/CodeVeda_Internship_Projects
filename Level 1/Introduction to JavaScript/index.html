@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive JS Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Interactive Webpage with JavaScript</h1>
+      <p>Dropdown, modal, and form validation demo</p>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Dropdown</h2>
+        <div class="dropdown" id="demoDropdown">
+          <button id="dropdownToggle" class="btn" aria-haspopup="true" aria-expanded="false">
+            <span id="dropdownLabel">Choose an option</span>
+            <span aria-hidden="true">▾</span>
+          </button>
+          <ul id="dropdownMenu" class="dropdown-menu hidden" role="menu" aria-label="Options">
+            <li role="menuitem"><button class="dropdown-item" data-value="Option A">Option A</button></li>
+            <li role="menuitem"><button class="dropdown-item" data-value="Option B">Option B</button></li>
+            <li role="menuitem"><button class="dropdown-item" data-value="Option C">Option C</button></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Modal</h2>
+        <button id="openModal" class="btn btn-primary">Open Modal</button>
+        <div id="modalOverlay" class="modal hidden" aria-hidden="true">
+          <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <header class="modal-header">
+              <h3 id="modalTitle">Example Modal</h3>
+              <button id="closeModal" class="icon-btn" aria-label="Close modal">✕</button>
+            </header>
+            <div class="modal-body">
+              <p>This is a simple modal. Click outside, press ESC, or use the close button to dismiss it.</p>
+            </div>
+            <footer class="modal-footer">
+              <button id="confirmModal" class="btn btn-primary">Confirm</button>
+              <button id="cancelModal" class="btn">Cancel</button>
+            </footer>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Contact Form</h2>
+        <form id="contactForm" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" />
+            <small class="error-message" id="error-name" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" />
+            <small class="error-message" id="error-email" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
+            <small class="error-message" id="error-password" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+            <small class="error-message" id="error-message" aria-live="polite"></small>
+          </div>
+
+          <div class="form-field checkbox-field">
+            <label>
+              <input type="checkbox" id="terms" name="terms" /> I agree to the terms
+            </label>
+            <small class="error-message" id="error-terms" aria-live="polite"></small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn">Reset</button>
+          </div>
+
+          <p id="formSuccess" class="success-message hidden" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Built with vanilla JavaScript</small>
+    </footer>
+
+    <script defer src="script.js"></script>
+  </body>
+  </html>
+
+

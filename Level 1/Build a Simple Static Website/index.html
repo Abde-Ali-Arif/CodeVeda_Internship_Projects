@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Simple Static Site</title>
+    <link rel="icon" href="logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html">
+          <img src="logo.svg" alt="Site logo" width="32" height="32" />
+          <span>StaticSite</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Build fast, responsive static websites</h1>
+            <p>
+              A minimal multi-page template with clean HTML, modern CSS, and
+              responsive layout to get you started quickly.
+            </p>
+            <div class="hero-actions">
+              <a class="btn primary" href="about.html">Learn more</a>
+              <a class="btn" href="contact.html">Get in touch</a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="hero.svg" alt="Abstract hero illustration" />
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="container">
+          <h2 class="section-title">What you get</h2>
+          <div class="feature-grid">
+            <article class="card">
+              <h3>Semantic HTML</h3>
+              <p>Clear structure for accessibility and SEO.</p>
+            </article>
+            <article class="card">
+              <h3>Modern CSS</h3>
+              <p>CSS variables, flexbox/grid, and media queries.</p>
+            </article>
+            <article class="card">
+              <h3>Responsive Layout</h3>
+              <p>Looks great on phones, tablets, and desktops.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>
+          © <span id="year"></span> StaticSite. All rights reserved.
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
